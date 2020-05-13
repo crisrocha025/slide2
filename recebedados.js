@@ -1,6 +1,6 @@
 var itens=[]
 	var num
-    for(num=1;num < 6;mum++){
+    for(num=1;num < 6;num++){
       var recebedor = '.itensPosts:nth-child('+num+')'
 	  itens.push(recebedor)
     }
