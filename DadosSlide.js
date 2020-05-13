@@ -18,7 +18,7 @@ var numItem = 0;
   function anterior(){
    if(numItem<5){
 	slide(numItem)
-	numItem++
+	numItem--
    }
   }
 function proximo(){
