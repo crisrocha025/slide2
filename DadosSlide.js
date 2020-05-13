@@ -13,5 +13,25 @@ itensDom.push(doc)
 var ant = document.querySelector('.ant')
 var prox = document.querySelector('.prox')
 function anterior(){
+	var mud=0;
+if(mud=0){	
+  itensDom[4].style='z-index:9;'
+  mud++
+}
+if(mud=0){	
   itensDom[3].style='z-index:9;'
+  mud++
+}
+if(mud=0){	
+  itensDom[2].style='z-index:9;'
+  mud++
+}
+if(mud=0){	
+  itensDom[1].style='z-index:9;'
+  mud++
+}
+if(mud=0){	
+  itensDom[0].style='z-index:9;'
+  mud-4
+}
 }
