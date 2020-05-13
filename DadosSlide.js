@@ -18,19 +18,19 @@ if(itensDom[0].style=='z-index:9;'){
   itensDom[4].style='z-index:9;'
   itensDom[0].style='z-index:1;'
 }
-if(itensDom[4].style=='z-index:9;'){	
+else if(itensDom[4].style=='z-index:9;'){	
   itensDom[3].style='z-index:9;'
   itensDom[4].style='z-index:1;'
 }
-if(itensDom[3].style=='z-index:9;'){	
+else if(itensDom[3].style=='z-index:9;'){	
   itensDom[2].style='z-index:9;'
   itensDom[3].style='z-index:1;'
 }
-if(itensDom[2].style=='z-index:9;'){	
+else if(itensDom[2].style=='z-index:9;'){	
   itensDom[1].style='z-index:9;'
   itensDom[2].style='z-index:1;'
 }
-if(itensDom[1].style='z-index:9;'){	
+else{	
   itensDom[0].style='z-index:9;'
   itensDom[1].style='z-index:1;'
 }
