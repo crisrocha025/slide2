@@ -19,7 +19,7 @@ function slider(n){
   itensDom[n].style ='z-index:9;'
 }
   function anterior(){
-    if(itemNum>0){
+    if(itemNum<4){
 		itemNum--
 		slider(itemNum)
     }
