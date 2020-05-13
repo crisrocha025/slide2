@@ -12,7 +12,7 @@ itensDom.push(doc)
 }
 window.load = slide(0)
 var numItem = 0;
-  function slide(n){
+  function slide(numItem){
   itensDom[n].style = 'z-index:9;'
   }
   function anterior(){
@@ -20,10 +20,4 @@ var numItem = 0;
 	slide(numItem)
 	numItem--
    }
-  }
-function proximo(){
-  if(numItem>0){
-	slide(numItem)
-	numItem++
-  }
   }
