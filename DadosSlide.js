@@ -18,7 +18,7 @@ function slider(n){
 	var allLi = 4;
   itensDom[n].style ='z-index:9;'
 }
-  function anterior(){
+  function proximo(){
     if(itemNum<4){
 		itemNum++
 		slider(itemNum)
