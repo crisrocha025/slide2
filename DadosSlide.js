@@ -24,6 +24,6 @@ var numItem = 0;
 function proximo(){
   if(numItem>0){
 	slide(numItem)
-	numItem--
+	numItem++
   }
   }
