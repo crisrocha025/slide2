@@ -10,7 +10,7 @@ for(cont=0;cont<5;cont++){
 var doc = document.querySelector(itens[cont])
 itensDom.push(doc)
 }
-window.load = slider(1)
+window.load = slider(0)
 
 var itemNum = 0;
 
@@ -19,8 +19,8 @@ function slider(n){
   itensDom[n].style ='z-index:9;'
 }
   function anterior(){
-    if(itemNum>0){
-		itemNum--
+    if(itemNum<4){
+		itemNum++
 		slider(itemNum)
     }
    
