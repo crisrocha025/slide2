@@ -10,5 +10,3 @@ for(cont=0;cont<5;cont++){
 var doc = document.querySelector(itens[cont])
 itensDom.push(doc)
 }
-var ant = document.querySelector('.ant')
-var prox = document.querySelector('.prox')
