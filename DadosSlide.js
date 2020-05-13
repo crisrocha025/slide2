@@ -13,3 +13,4 @@ itensDom.push(doc)
 var ant = document.querySelector('.ant')
 var prox = document.querySelector('.prox')
 
+itensDom.style.backgroundImage= 'url('<data:blog.postImageUrl/>')'
