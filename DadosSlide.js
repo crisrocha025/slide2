@@ -12,6 +12,7 @@ itensDom.push(doc)
 }
 var ant = document.querySelector('.ant')
 var prox = document.querySelector('.prox')
+itensDom[0].style='z-index:9;
 function anterior(){
 if(itensDom[0].style=='z-index:9;'){	
   itensDom[4].style='z-index:9;'
