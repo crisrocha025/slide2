@@ -17,18 +17,6 @@ if(itensDom[0].style=='z-index:5;'){
   itensDom[4].style='z-index:9;'
   itensDom[0].style='z-index:1;'
 }
-else if(itensDom[4].style=='z-index:9;'){	
-  itensDom[3].style='z-index:8;'
-  itensDom[4].style='z-index:1;'
-}
-else if(itensDom[3].style=='z-index:9;'){	
-  itensDom[2].style='z-index:7;'
-  itensDom[3].style='z-index:1;'
-}
-else if(itensDom[2].style=='z-index:9;'){	
-  itensDom[1].style='z-index:6;'
-  itensDom[2].style='z-index:1;'
-}
 else{	
   itensDom[0].style='z-index:5;'
   itensDom[1].style='z-index:1;'
