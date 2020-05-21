@@ -3,79 +3,60 @@
 //Url: www.ocodigocris.com
 var itens=[]
 	var num
-    for(num=1;num < 6;num++){
+    for(num=1;num < 7;num++){
       var recebedor = '.itensPosts:nth-child('+num+')'
 	  itens.push(recebedor)
     }
 var itensDom = []
-var cont
-for(cont=0;cont<5;cont++){
+for(cont=1;cont<6;cont++){
 var doc = document.querySelector(itens[cont])
 itensDom.push(doc)
 }
-var optUm = document.querySelector('.optUm')
-var optDois = document.querySelector('.optDois')
-var optTres = document.querySelector('.optTres')
-var optQuatro = document.querySelector('.optQuatro')
-var optCinco = document.querySelector('.optCinco')
-var altera = [optUm,optDois,optTres,optQuatro,optCinco]
-function circleUm(){
-altera[0].style.background = '#f7406e'
-altera[1].style.background = '#36453b'
-altera[2].style.background = '#36453b'
-altera[3].style.background = '#36453b'
-altera[4].style.background = '#36453b'
-itensDom[0].style = 'z-index:9;'
-itensDom[1].style = 'z-index:1;'
-itensDom[2].style = 'z-index:1;'
-itensDom[3].style = 'z-index:1;'
-itensDom[4].style = 'z-index:1;'
+
+var p
+var tmp
+var maxPost
+var postAtual
+function mostraPost(atual){
+itensDom[atual].style ='z-index:7;opacity:1;'
+if(atual!=0){
+itensDom[0].style ='z-index:1;opacity:0;'
 }
-function circleDois(){
-altera[1].style.background = '#f7406e'
-altera[0].style.background = '#36453b'
-altera[2].style.background = '#36453b'
-altera[3].style.background = '#36453b'
-altera[4].style.background = '#36453b'
-itensDom[1].style = 'z-index:9;'
-itensDom[0].style = 'z-index:1;'
-itensDom[2].style = 'z-index:1;'
-itensDom[3].style = 'z-index:1;'
-itensDom[4].style = 'z-index:1;'
+if(atual!=1){
+itensDom[1].style ='z-index:1;opacity:0;'
 }
-function circleTres(){
-altera[2].style.background = '#f7406e'
-altera[1].style.background = '#36453b'
-altera[0].style.background = '#36453b'
-altera[3].style.background = '#36453b'
-altera[4].style.background = '#36453b'
-itensDom[2].style = 'z-index:9;'
-itensDom[0].style = 'z-index:1;'
-itensDom[1].style = 'z-index:1;'
-itensDom[3].style = 'z-index:1;'
-itensDom[4].style = 'z-index:1;'
+if(atual!=2){
+itensDom[2].style ='z-index:1;opacity:0;'
 }
-function circleQuatro(){
-altera[3].style.background = '#f7406e'
-altera[1].style.background = '#36453b'
-altera[2].style.background = '#36453b'
-altera[0].style.background = '#36453b'
-altera[4].style.background = '#36453b'
-itensDom[3].style = 'z-index:9;'
-itensDom[0].style = 'z-index:1;'
-itensDom[1].style = 'z-index:1;'
-itensDom[2].style = 'z-index:1;'
-itensDom[4].style = 'z-index:1;'
+if(atual!=3){
+itensDom[3].style ='z-index:1;opacity:0;'
 }
-function circleCinco(){
-altera[4].style.background = '#f7406e'
-altera[1].style.background = '#36453b'
-altera[2].style.background = '#36453b'
-altera[3].style.background = '#36453b'
-altera[0].style.background = '#36453b'
-itensDom[4].style = 'z-index:9;'
-itensDom[0].style = 'z-index:1;'
-itensDom[1].style = 'z-index:1;'
-itensDom[3].style = 'z-index:1;'
-itensDom[0].style = 'z-index:1;'
+if(atual!=4){
+itensDom[4].style ='z-index:1;opacity:0;'
 }
+}
+
+function iniciaSlide(){
+    maxPost=itensDom.length -1
+    postAtual=1
+    tmp=0
+    anima()
+}
+function alteraPost(val){
+    postAtual+=val
+    if(postAtual > maxPost){
+        postAtual = 0
+    }else if(postAtual < 0){
+            postAtual=maxPost
+    }
+    mostraPost(postAtual)
+}
+function anima(){
+    tmp++
+    if(tmp>=200){
+        tmp=0;
+        alteraPost(1)
+    }
+    window.requestAnimationFrame(anima)
+}
+document.addEventListener('load',iniciaSlide());
